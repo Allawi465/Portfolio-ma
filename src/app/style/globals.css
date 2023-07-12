@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.swiper {
+  min-height: 370px !important;
+}
+
+.swiper-slide {
+  width: 380px !important;
+}
+
+/* arrow mouse scroll */
+
+.one,
+.two,
+.tree {
+  animation: arrowDown 1s infinite;
+}
+
+.one {
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.two {
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+}
+
+.tree {
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+.arrow {
+  display: block;
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 423px) {
+  .swiper-slide {
+    width: 330px !important;
+  }
+
+  .card-project {
+    width: 330px !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .swiper-slide {
+    width: 220px !important;
+  }
+
+  .card-project {
+    width: 220px !important;
+  }
+}
