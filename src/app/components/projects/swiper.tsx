@@ -31,20 +31,20 @@ const MySlider = () => {
             />
             <div className="flex flex-col p-4">
               <div className="flex-1">
-                <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
+                <h3 className="text-white text-base font-medium tracking-tight">
                   Buyers.
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                <p className="text-slate-400 mt-2 text-sm">
                   An e-commerce store built with React, Bootstrap, sass and
                   rest-api.
                 </p>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 text-white">
                 <a href="https://github.com/Allawi465/js-framewokrs-ca">
                   <ImGithub size={25} />
                 </a>
                 <Link
-                  className="text-lightblue dark:text-sky-400 flex items-center"
+                  className="text-sky-400 flex items-center"
                   href="https://buyers.netlify.app/"
                 >
                   Live site
@@ -66,20 +66,20 @@ const MySlider = () => {
             />
             <div className="p-4 flex flex-col">
               <div className="flex-1">
-                <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
+                <h3 className="text-white text-base font-medium tracking-tight">
                   Holidaze
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                <p className="text-slate-400 mt-2 text-sm">
                   A front-end application for a booking site called Holidaze
                   built with React, Bootstrap, sass and rest-api.
                 </p>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 text-white">
                 <a href="https://github.com/Allawi465/holidaze">
                   <ImGithub size={25} />
                 </a>
                 <Link
-                  className="text-lightblue dark:text-sky-400 flex items-center"
+                  className="text-sky-400 flex items-center"
                   href="https://allawi465.github.io/holidaze/"
                 >
                   Live site
@@ -101,20 +101,20 @@ const MySlider = () => {
             />
             <div className="p-4 flex flex-col">
               <div className="flex-1">
-                <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
+                <h3 className="text-white text-base font-medium tracking-tight">
                   Adventure-Trails-Hikes
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                <p className="text-slate-400 mt-2 text-sm">
                   A responsive website for Adventure Trails Hikes a new business
                   offering hiking experiences in various countries.
                 </p>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 text-white">
                 <a href="https://github.com/Allawi465/Adventure-Trails-Hikes">
                   <ImGithub size={25} />
                 </a>
                 <Link
-                  className="text-lightblue dark:text-sky-400 flex items-center"
+                  className="text-sky-400 flex items-center"
                   href="https://allawi465.github.io/Adventure-Trails-Hikes/"
                 >
                   Live site
@@ -136,20 +136,20 @@ const MySlider = () => {
             />
             <div className="p-4 flex flex-col">
               <div className="flex-1">
-                <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
+                <h3 className="text-white text-base font-medium tracking-tight">
                   NoxB
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                <p className="text-slate-400 mt-2 text-sm">
                   An auction site where users can add items to be bid on and bid
                   on items other users have put up for auction.
                 </p>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 text-white">
                 <a href="https://github.com/Allawi465/Semester-Project-2">
                   <ImGithub size={25} />
                 </a>
                 <Link
-                  className="text-lightblue dark:text-sky-400 flex items-center"
+                  className="text-sky-400 flex items-center"
                   href="https://noxb.netlify.app/index.html"
                 >
                   Live site
@@ -171,20 +171,20 @@ const MySlider = () => {
             />
             <div className="p-4 flex flex-col">
               <div className="flex-1">
-                <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
+                <h3 className="text-white text-base font-medium tracking-tight">
                   Notebook
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                <p className="text-slate-400 mt-2 text-sm">
                   Eye-controlled virtual keyboard and calculator notebook for
                   disabled users.
                 </p>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 text-white">
                 <a href="https://github.com/Allawi465/notebook">
                   <ImGithub size={25} />
                 </a>
                 <Link
-                  className="text-lightblue dark:text-sky-400 flex items-center"
+                  className="text-sky-400 flex items-center"
                   href="https://allawi465.github.io/notebook/"
                 >
                   Live site

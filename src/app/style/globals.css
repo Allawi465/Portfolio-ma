@@ -4,12 +4,27 @@
 
 @layer base {
   body {
-    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-dark;
   }
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+section {
+  min-height: 100vh;
 }
 
 .swiper {

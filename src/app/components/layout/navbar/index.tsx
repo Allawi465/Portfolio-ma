@@ -1,7 +1,6 @@
 'use client';
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
-import { useRouter } from 'next/router';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 interface NavigationItem {
@@ -11,9 +10,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About me', href: '/#about', current: false },
-  { name: 'My work', href: '/#projects', current: false },
+  { name: 'Home', href: '#portfolio', current: true },
+  { name: 'About me', href: '#about', current: false },
+  { name: 'My work', href: '#projects', current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -21,15 +20,49 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Navbar() {
-  const updatedNavigation = navigation.map((item) => {
-    return {
-      ...item,
-      current: item.name === 'Home',
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [updatedNavigation, setUpdatedNavigation] =
+    useState<NavigationItem[]>(navigation);
+
+  const handleMobileMenuToggle = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+
+    if (!isMobileMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const updatedNav = navigation.map((item) => {
+        const element = document.querySelector(item.href) as HTMLElement;
+        const offsetY = element?.offsetTop || 0;
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+
+        const isCurrent =
+          scrollY >= offsetY - windowHeight / 2 &&
+          scrollY < offsetY + windowHeight / 2;
+
+        return {
+          ...item,
+          current: isCurrent,
+        };
+      });
+
+      setUpdatedNavigation(updatedNav);
     };
-  });
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header id="header">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark">
       <Disclosure as="nav">
         {({ open }) => (
           <>
@@ -37,7 +70,10 @@ export default function Navbar() {
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                  <Disclosure.Button
+                    className="inline-flex items-center justify-center p-2 rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 z-999"
+                    onClick={handleMobileMenuToggle}
+                  >
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <AiOutlineClose
@@ -55,9 +91,9 @@ export default function Navbar() {
 
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                   <div className="flex items-center justify-center">
-                    <div className="rounded-full bg-dark text-white border-2 border-solid border-white dark:border-white ">
+                    <div className="rounded-full bg-dark text-white border-2 border-solid  border-white">
                       <a
-                        href={'/'}
+                        href="#portfolio"
                         className="w-14 h-14 flex items-center justify-center"
                       >
                         <span className="text-2xl font-bold">MA</span>
@@ -73,15 +109,15 @@ export default function Navbar() {
                             <div
                               className={classNames(
                                 item.current
-                                  ? 'text-black font-semibold dark:text-gray-100'
-                                  : 'text-gray-500 dark:text-gray-400',
+                                  ? 'font-semibold text-gray-100'
+                                  : 'text-gray-400',
                                 'rounded-md mx-4 pt-2 text-sm font-medium mt-2.5 relative group'
                               )}
                               aria-current={item.current ? 'page' : undefined}
                             >
                               {item.name}
                               <span
-                                className={`h-[1px] inline-block bg-black dark:bg-white absolute left-0 -bottom-0.5 group-hover:w-full w-0 transition-[width] ease duration-300'
+                                className={`h-[1px] inline-block bg-white absolute left-0 -bottom-0.5 group-hover:w-full w-0 transition-[width] ease duration-300'
                                 }`}
                               >
                                 &nbsp;
@@ -95,22 +131,30 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel
+              className={`sm:hidden fixed top-[63px] left-0 right-0 bottom-0 bg-dark h-full ${
+                isMobileMenuOpen ? 'overflow-hidden' : ''
+              }`}
+            >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 text-center">
+                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform  -translate-y-1/2">
                   {updatedNavigation.map((item) => (
-                    <div key={item.name}>
-                      <a href={item.href}>
+                    <div
+                      key={item.name}
+                      className="h-[120px] flex justify-center w-full my-auto"
+                    >
+                      <a href={item.href} className="w-full my-auto">
                         <div
                           className={classNames(
                             item.current
-                              ? 'py-2 pl-3 pr-4 text-black font-semibold dark:text-gray-100'
-                              : 'py-2 pl-3 pr-4 text-gray-500 dark:text-gray-400 rounded hover:text-black hover:bg-gray-100 md:hover:bg-transparent dark:hover:bg-gray-700 dark:hover:text-white',
+                              ? 'py-2 pl-3 pr-4 font-semibold text-gray-100'
+                              : 'py-2 pl-3 pr-4 text-gray-400 rounded md:hover:bg-transparent hover:bg-gray-700 hover:text-white',
                             'rounded-md mx-4 pt-2 text-sm font-medium mt-2.5 relative group'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                           onClick={() => {
                             close();
+                            handleMobileMenuToggle();
                           }}
                         >
                           {item.name}
