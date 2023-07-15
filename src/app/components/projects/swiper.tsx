@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -41,13 +40,13 @@ const MySlider = () => {
                     <a href={slide.githubLink}>
                       <ImGithub size={25} />
                     </a>
-                    <Link
+                    <a
                       className="text-sky-400 flex items-center"
                       href={slide.liveSiteLink}
                     >
                       Live site
                       <FiExternalLink className="ml-1" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

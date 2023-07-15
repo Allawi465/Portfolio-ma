@@ -8,7 +8,7 @@ export default function Projects() {
           Projects.
         </h2>
         <MySlider />
-        <div className="arrow-scroll pt-[90px] sm:pt-[200px] ">
+        <div className="arrow-scroll pt-[50px] sm:pt-[200px] ">
           <a href="#about">
             <span className="arrow one border-r-2 border-b-2 border-sky-400"></span>
             <span className="arrow two border-r-2 border-b-2 border-sky-400"></span>
