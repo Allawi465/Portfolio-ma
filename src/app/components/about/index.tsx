@@ -1,3 +1,4 @@
+import Skills from '../word-cloud';
 export default function AboutMe() {
   return (
     <section id="about" className="py-4">
@@ -27,7 +28,7 @@ export default function AboutMe() {
                 research to acquire the expertise to become a proffesional web
                 developer.
               </p>
-              <div className="flex justify-between sm:flex-col py-2">
+              <div className="flex justify-between py-2">
                 <div>
                   <strong className="uppercase font-bold my-3 text-white">
                     Full name:
@@ -52,10 +53,10 @@ export default function AboutMe() {
                 <span className="font-bold text-white ">
                   Languages & tools I work with
                 </span>
-                : HTML, CSS, JavaScript, TypeScript, React, Next.js, MySQL,
-                Figma, Git, Netlify, Github & WordPress.
+                : HTML, CSS, Sass, JavaScript, TypeScript, React, Next.js, Figma
+                & Tailwind.
               </p>
-              <p className="my-2 text-base sm:text-xl text-darkGrey">
+              <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mb-0">
                 In my regular day, I primarily use React and Next.js for
                 building dynamic and interactive web applications. I also have
                 experience with Figma for designing user interfaces and graphic
@@ -67,6 +68,7 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
+      <Skills />
     </section>
   );
 }
