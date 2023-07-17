@@ -1,46 +1,46 @@
 export const Technologies = [
   {
     name: 'HTML 5',
-    icon: './tech/html.png',
+    icon: './html.png',
   },
   {
     name: 'CSS 3',
-    icon: './tech/CSS.png',
+    icon: './CSS.png',
   },
   {
     name: 'JavaScript',
-    icon: './tech/javaScript.png',
+    icon: './javaScript.png',
   },
   {
     name: 'TypeScript',
-    icon: './tech/typeScript.png',
+    icon: './typeScript.png',
   },
   {
     name: 'React JS',
-    icon: './tech/reactjs.png',
+    icon: './reactjs.png',
   },
   {
     name: 'Next.js',
-    icon: './tech/Next.js.png',
+    icon: './Next.js.png',
   },
   {
     name: 'Tailwind CSS',
-    icon: './tech/tailwind.png',
+    icon: './tailwind.png',
   },
   {
     name: 'Node JS',
-    icon: './tech/nodejs.png',
+    icon: './nodejs.png',
   },
   {
     name: 'Three JS',
-    icon: './tech/three-js-icon.png',
+    icon: './three-js-icon.png',
   },
   {
     name: 'Git',
-    icon: './tech/git.png',
+    icon: './git.png',
   },
   {
     name: 'Figma',
-    icon: './tech/figma.png',
+    icon: './figma.png',
   },
 ];
