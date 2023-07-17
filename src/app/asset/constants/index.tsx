@@ -13,7 +13,7 @@ export const Technologies = [
   },
   {
     name: 'TypeScript',
-    icon: './typescript.png',
+    icon: './ts-logo-round-128.png',
   },
   {
     name: 'React JS',
