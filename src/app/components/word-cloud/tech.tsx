@@ -34,7 +34,7 @@ const Tech = () => {
     : Technologies;
 
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-10 md:w-10/12 w-full m-auto mt-10">
+    <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-10 md:w-10/12 w-full m-auto mt-2 md:mt-10">
       {technologiesToShow.map((technology) => (
         <div
           className="w-28 h-28 cursor-pointer	cursor: pointer;"

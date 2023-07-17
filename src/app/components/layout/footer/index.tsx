@@ -5,7 +5,10 @@ import { MdOutgoingMail } from 'react-icons/md';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-transparent">
+    <footer
+      className="w-full bg-transparent"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
+    >
       <div className="w-full max-w-screen-xl mx-auto md:py-8">
         <div className="flex gap-2 items-center flex-row justify-between flex-wrap">
           <div className="rounded-full my-2 bg-dark text-white border-2 border-solid border-white inline-block">

@@ -62,7 +62,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-dark"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
+    >
       <Disclosure as="nav">
         {({ open }) => (
           <>

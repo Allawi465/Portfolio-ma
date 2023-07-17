@@ -3,13 +3,13 @@ import Particles from '../particlest/index';
 
 export default function Introduction() {
   return (
-    <section id="portfolio">
+    <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
           <h1 className="text-3xl md:pt-4 text-center text-white">
             Hello, I'm Mohammed Allawi
           </h1>
-          <h2 className="text-darkGrey text-2xl md:py-2 text-center sm:text-start">
+          <h2 className="text-darkGrey text-2xl md:py-2 text-center sm:text-start italic">
             Front-end developer & UX designer.
           </h2>
           <div className="flex justify-center py-3">
@@ -25,7 +25,7 @@ export default function Introduction() {
       </div>
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
+        quantity={200}
       />
     </section>
   );
