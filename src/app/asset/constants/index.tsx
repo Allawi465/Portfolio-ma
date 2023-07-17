@@ -5,15 +5,15 @@ export const Technologies = [
   },
   {
     name: 'CSS 3',
-    icon: './CSS.png',
+    icon: './css.png',
   },
   {
     name: 'JavaScript',
-    icon: './javaScript.png',
+    icon: './javascript.png',
   },
   {
     name: 'TypeScript',
-    icon: './typeScript.png',
+    icon: './typescript.png',
   },
   {
     name: 'React JS',
