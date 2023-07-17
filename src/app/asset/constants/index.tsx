@@ -1,11 +1,11 @@
 export const Technologies = [
   {
     name: 'HTML 5',
-    icon: '/tech/html.png',
+    icon: '../tech/html.png',
   },
   {
     name: 'CSS 3',
-    icon: '/tech/CSS.png',
+    icon: '../tech/CSS.png',
   },
   {
     name: 'JavaScript',
