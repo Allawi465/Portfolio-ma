@@ -5,11 +5,11 @@ export const Technologies = [
   },
   {
     name: 'CSS 3',
-    icon: './css.png',
+    icon: './css-3.png',
   },
   {
     name: 'JavaScript',
-    icon: './javascript.png',
+    icon: './js(1).png',
   },
   {
     name: 'TypeScript',
