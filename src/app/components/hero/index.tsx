@@ -10,7 +10,7 @@ export default function Introduction() {
             Hello, I'm Mohammed Allawi
           </h1>
           <h2 className="text-darkGrey text-2xl md:py-2 text-center sm:text-start">
-            Front-end web development and UX designer.
+            Front-end developer & UX designer.
           </h2>
           <div className="flex justify-center py-3">
             <a

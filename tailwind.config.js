@@ -13,6 +13,7 @@ module.exports = {
         lightDark: '#2B2B2B',
         lightblue: '#20779E',
         fade: '#ffffff00',
+        secondary: '#aaa6c3',
       },
       fontSize: {
         sm: '0.8rem',
