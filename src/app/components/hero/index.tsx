@@ -25,7 +25,7 @@ export default function Introduction() {
       </div>
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={200}
+        quantity={100}
       />
     </section>
   );
