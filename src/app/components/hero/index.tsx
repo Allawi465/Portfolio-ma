@@ -7,10 +7,10 @@ export default function Introduction() {
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
           <h1 className="text-3xl md:pt-4 text-center text-white">
-            Hello, I'm Mohammed Allawi
+            Hei, jeg er Mohammed Allawi
           </h1>
           <h2 className="text-darkGrey text-2xl md:py-2 text-center sm:text-start italic">
-            Front-end developer & UX designer.
+            Front-end utvikler & UX-designer.
           </h2>
           <div className="flex justify-center py-3">
             <a

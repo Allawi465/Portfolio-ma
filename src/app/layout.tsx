@@ -1,25 +1,38 @@
+'use client';
 import './style/globals.css';
-import type { Metadata } from 'next';
+import { useState, useEffect } from 'react';
 import Navbar from './components/layout/navbar';
 import Footer from './components/layout/footer';
-
-export const metadata: Metadata = {
-  title: 'Portfolio | MA',
-  description: 'My personal portfolio',
-  keywords: 'front-end developer, next.js, typescript, tailwind, thereJs',
-};
+import Loading from './components/loading';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );

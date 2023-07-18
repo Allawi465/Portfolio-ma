@@ -11,13 +11,18 @@ export default function Footer() {
     >
       <div className="w-full max-w-screen-xl mx-auto md:py-8">
         <div className="flex gap-2 items-center flex-row justify-between flex-wrap">
-          <div className="rounded-full my-2 bg-dark text-white border-2 border-solid border-white inline-block">
-            <a
-              href="#portfolio"
-              className="w-14 h-14 flex items-center justify-center"
-            >
-              <span className="text-2xl font-bold">MA</span>
-            </a>
+          <div
+            className="flex items-center justify-center mt-1"
+            style={{ fontFamily: "'Sail', cursive" }}
+          >
+            <div className="bg-dark text-white ">
+              <a
+                href="#portfolio"
+                className="w-14 h-14 flex items-center justify-center"
+              >
+                <span className="text-2xl font-bold">MA</span>
+              </a>
+            </div>
           </div>
           <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400">
             <li className="flex items-center">

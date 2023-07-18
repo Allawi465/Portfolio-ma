@@ -44,8 +44,8 @@ const MySlider = () => {
                       className="text-sky-400 flex items-center"
                       href={slide.liveSiteLink}
                     >
-                      Live site
-                      <FiExternalLink className="ml-1" />
+                      Test siden
+                      <FiExternalLink className="ml-1 mb-1" />
                     </a>
                   </div>
                 </div>

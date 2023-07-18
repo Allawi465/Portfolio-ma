@@ -10,9 +10,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '#portfolio', current: true },
-  { name: 'My work', href: '#projects', current: false },
-  { name: 'About me', href: '#about', current: false },
+  { name: 'Hjem', href: '#portfolio', current: true },
+  { name: 'Prosjekter', href: '#projects', current: false },
+  { name: 'Om MA', href: '#about', current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -44,7 +44,7 @@ export default function Navbar() {
 
         const isCurrent =
           scrollY >= offsetY - windowHeight / 2 &&
-          scrollY < offsetY + windowHeight / 2;
+          scrollY < offsetY + element.offsetHeight - windowHeight / 2;
 
         return {
           ...item,
@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-dark"
+      className="fixed top-0 left-0 right-0 z-50 bg-dark opacity-[.97]"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <Disclosure as="nav">
@@ -93,8 +93,11 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-between">
-                  <div className="flex items-center justify-center mt-1">
-                    <div className="rounded-full bg-dark text-white border-2 border-solid  border-white">
+                  <div
+                    className="flex items-center justify-center mt-1"
+                    style={{ fontFamily: "'Sail', cursive" }}
+                  >
+                    <div className="bg-dark text-white ">
                       <a
                         href="#portfolio"
                         className="w-14 h-14 flex items-center justify-center"
@@ -135,16 +138,16 @@ export default function Navbar() {
               </div>
             </div>
             <Disclosure.Panel
-              className={`sm:hidden fixed top-[63px] left-0 right-0 bottom-0 bg-dark h-full ${
+              className={`navbar sm:hidden bg-dark h-full ${
                 isMobileMenuOpen ? 'overflow-hidden' : ''
               }`}
             >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform  -translate-y-1/2">
+                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform  -translate-y-1/2 mt-[-64px]">
                   {updatedNavigation.map((item) => (
                     <div
                       key={item.name}
-                      className="h-[120px] flex justify-center w-full my-auto"
+                      className="navlink-sm h-[120px] flex justify-center w-full my-auto"
                     >
                       <a href={item.href} className="w-full my-auto">
                         <div
