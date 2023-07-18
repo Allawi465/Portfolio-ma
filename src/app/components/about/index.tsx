@@ -62,11 +62,12 @@ export default function AboutMe() {
                 & Tailwind.
               </p>
               <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mb-0">
-                I min daglige rutine bruker jeg primært React og Next.js for å
-                bygge dynamiske og interaktive webapplikasjoner. Jeg har også
-                erfaring med Figma for å designe grafiske designoppgaver. Nylig
-                har jeg begynt å utforske biblioteker som Anime.js og Three.js
-                for å legge til animasjoner og 3D-grafikk i prosjektene mine.
+                Jeg har hovedfokus på å utvikle dynamiske og interaktive
+                web-applikasjoner ved bruk av React og Next.js. Design er også
+                veldig viktig for meg, og jeg bruker verktøy som Figma og
+                Tailwind CSS for å skape en god brukeropplevelse (UX) og et
+                attraktivt "User Interface". Nylig har jeg også begynt å
+                utforske animasjoner og 3D-grafikk med Anime.js og Three.js.
               </p>
             </div>
           </div>

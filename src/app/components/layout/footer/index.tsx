@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="w-full max-w-screen-xl mx-auto md:py-8">
         <div className="flex gap-2 items-center flex-row justify-between flex-wrap">
           <div
-            className="flex items-center justify-center mt-1"
+            className="flex items-center justify-center mt-1 ml-2"
             style={{ fontFamily: "'Sail', cursive" }}
           >
             <div className="bg-dark text-white ">
@@ -20,7 +20,7 @@ export default function Footer() {
                 href="#portfolio"
                 className="w-14 h-14 flex items-center justify-center"
               >
-                <span className="text-2xl font-bold">MA</span>
+                <span className="text-[22px] font-bold">MA</span>
               </a>
             </div>
           </div>

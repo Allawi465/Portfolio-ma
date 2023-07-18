@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-dark opacity-[.97]"
+      className="fixed top-0 left-0 right-0 z-50 bg-dark opacity-[.98]"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <Disclosure as="nav">
@@ -94,7 +94,7 @@ export default function Navbar() {
 
                 <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-between">
                   <div
-                    className="flex items-center justify-center mt-1"
+                    className="flex items-center justify-center mt-1 ml-2"
                     style={{ fontFamily: "'Sail', cursive" }}
                   >
                     <div className="bg-dark text-white ">
@@ -102,7 +102,7 @@ export default function Navbar() {
                         href="#portfolio"
                         className="w-14 h-14 flex items-center justify-center"
                       >
-                        <span className="text-2xl font-bold">MA</span>
+                        <span className="text-[22px] font-bold">MA</span>
                       </a>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
                             item.current
                               ? 'py-2 pl-3 pr-4 font-semibold text-gray-100'
                               : 'py-2 pl-3 pr-4 text-gray-400 rounded md:hover:bg-transparent hover:bg-gray-700 hover:text-white',
-                            'rounded-md mx-4 pt-2 text-sm font-medium mt-2.5 relative group'
+                            'rounded-md mx-4 pt-2 font-medium mt-2.5 relative group'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                           onClick={() => {
