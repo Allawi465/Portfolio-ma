@@ -25,6 +25,8 @@ const Tech = () => {
     'React JS',
     'Three JS',
     'JavaScript',
+    'TypeScript',
+    'Tailwind CSS',
   ];
 
   const technologiesToShow = isSmallDevice
@@ -37,7 +39,7 @@ const Tech = () => {
     <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-10 md:w-10/12 w-full m-auto mt-2 md:mt-10">
       {technologiesToShow.map((technology) => (
         <div
-          className="w-28 h-28 cursor-pointer	cursor: pointer;"
+          className="w-24 h-24 md:w-28 md:h-28  cursor-pointer	cursor: pointer;"
           key={technology.name}
         >
           <BallCanvas image={technology.icon} />

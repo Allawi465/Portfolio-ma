@@ -36,7 +36,7 @@ const MySlider = () => {
                       {slide.description}
                     </p>
                   </div>
-                  <div className="flex justify-between items-center py-3 text-white">
+                  <div className="flex justify-between items-center py-3 mt-2 text-white">
                     <a href={slide.githubLink}>
                       <ImGithub size={25} />
                     </a>
