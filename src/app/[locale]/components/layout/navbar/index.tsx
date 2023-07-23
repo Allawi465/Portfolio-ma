@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslations } from 'next-intl';
 import TranslateDropdown from '../../dropdown';
 
 interface NavigationItem {
@@ -12,9 +12,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'common:home', href: '#portfolio', current: true },
-  { name: 'common:projects', href: '#projects', current: false },
-  { name: 'common:about', href: '#about', current: false },
+  { name: 'home', href: '#portfolio', current: true },
+  { name: 'projects', href: '#projects', current: false },
+  { name: 'about', href: '#about', current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -22,7 +22,7 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Navbar() {
-  const { t } = useTranslation('common');
+  const t = useTranslations('navbar');
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [updatedNavigation, setUpdatedNavigation] =
     useState<NavigationItem[]>(navigation);

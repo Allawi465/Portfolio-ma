@@ -1,7 +1,8 @@
+'use client';
 import Tech from '../word-cloud/tech';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslations } from 'next-intl';
 export default function AboutMe() {
-  const { t } = useTranslation('common');
+  const t = useTranslations('about');
   return (
     <section id="about" className="py-4">
       <div className="py-4">

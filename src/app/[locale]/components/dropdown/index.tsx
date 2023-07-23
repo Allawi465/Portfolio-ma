@@ -1,26 +1,28 @@
 'use client';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import useTranslation from 'next-translate/useTranslation';
-import useSetLanguage from '../setLanguage';
-
+import { usePathname, useRouter } from 'next-intl/client';
+import { useLocale } from 'next-intl';
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ');
 }
 
 export default function TranslateDropdown() {
-  const { lang } = useTranslation();
-  const setLanguage = useSetLanguage();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
+  const router = useRouter();
+
   const handleLanguageChange = () => {
-    const newLanguage = lang === 'en' ? 'no' : 'en';
-    setLanguage(newLanguage);
+    // Toggle between 'en' and 'no' based on the current locale
+    const newLocale = currentLocale === 'en' ? 'no' : 'en';
+    router.replace(pathname, { locale: newLocale });
   };
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white shadow-sm ring-2 ring-inset outline-none  hover:bg-gray-700 ring-gray-600 z-999 w-[45px]">
-          {lang === 'en' ? 'EN' : 'NO'}
+        <Menu.Button className="inline-flex justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white shadow-sm ring-2 ring-inset outline-none  hover:bg-gray-700 ring-gray-600 z-999 w-[45px] uppercase">
+          {currentLocale}
         </Menu.Button>
       </div>
 
@@ -45,7 +47,7 @@ export default function TranslateDropdown() {
                   )}
                   onClick={handleLanguageChange}
                 >
-                  {lang === 'en' ? 'NO' : 'EN'}{' '}
+                  {currentLocale === 'en' ? 'NO' : 'EN'}
                 </a>
               )}
             </Menu.Item>

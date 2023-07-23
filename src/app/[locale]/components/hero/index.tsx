@@ -1,9 +1,10 @@
+'use client';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import Particles from '../particlest/index';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslations } from 'next-intl';
 
 export default function Introduction() {
-  const { t } = useTranslation('common');
+  const t = useTranslations('introduction');
   return (
     <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <Particles
