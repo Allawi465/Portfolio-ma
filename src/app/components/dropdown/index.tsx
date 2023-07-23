@@ -19,7 +19,7 @@ export default function TranslateDropdown() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white shadow-sm ring-2 ring-inset outline-none  hover:bg-gray-700 ring-gray-600 z-999 w-[45px]">
+        <Menu.Button className="inline-flex justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white shadow-sm ring-2 ring-inset outline-none  hover:bg-gray-700 ring-gray-600 z-999 w-[45px]">
           {lang === 'en' ? 'EN' : 'NO'}
         </Menu.Button>
       </div>
@@ -43,10 +43,9 @@ export default function TranslateDropdown() {
                     active ? ' text-[#e3e3e3]' : 'text-white',
                     'block px-3 p-2 text-sm w-[45px]'
                   )}
-                  onClick={handleLanguageChange} // Call the function to change the language
+                  onClick={handleLanguageChange}
                 >
                   {lang === 'en' ? 'NO' : 'EN'}{' '}
-                  {/* Display 'NO' or 'EN' based on the current language */}
                 </a>
               )}
             </Menu.Item>
