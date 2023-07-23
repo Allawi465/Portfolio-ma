@@ -1,6 +1,11 @@
-const withNextIntl = require('next-intl/plugin')();
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = withNextIntl(nextConfig);
+const withNextIntl = require('next-intl/plugin')('./i18n.ts');
+module.exports = withNextIntl({
+  rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/no',
+      },
+    ];
+  },
+});
