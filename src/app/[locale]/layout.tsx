@@ -3,7 +3,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Navbar from './components/layout/navbar';
 import Footer from './components/layout/footer';
-import { redirect } from 'next-intl/server';
 import Loading from './components/loading';
 
 export function generateStaticParams() {

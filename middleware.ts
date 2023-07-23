@@ -1,23 +1,26 @@
-import createIntlMiddleware from 'next-intl/middleware';
-import { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
 
-export default async function middleware(request: NextRequest) {
-  // Step 1: Use the incoming request
-  const defaultLocale = request.headers.get('x-default-locale') || 'no';
+export default createMiddleware({
+  // All locales across all domains
+  locales: ['no', 'en'],
 
-  // Step 2: Create and call the next-intl middleware
-  const handleI18nRouting = createIntlMiddleware({
-    locales: ['no', 'en'],
-    defaultLocale,
-  });
-  const response = handleI18nRouting(request);
+  // Used when no domain matches (e.g. on localhost)
+  defaultLocale: 'no',
 
-  // Step 3: Alter the response
-  response.headers.set('x-default-locale', defaultLocale);
-
-  return response;
-}
-
-export const config = {
-  matcher: ['/((?!_next|.*\\..*).*)'],
-};
+  domains: [
+    {
+      domain: 'https://allawi465.github.io/Portfolio-ma/',
+      defaultLocale: 'no',
+      // Optionally restrict the locales managed by this domain. If this
+      // domain receives requests for another locale (e.g. us.example.com/fr),
+      // then the middleware will redirect to a domain that supports it.
+      locales: ['no'],
+    },
+    {
+      domain: 'https://allawi465.github.io/Portfolio-ma/',
+      defaultLocale: 'no',
+      // If there are no `locales` specified on a domain,
+      // all global locales will be supported here.
+    },
+  ],
+});

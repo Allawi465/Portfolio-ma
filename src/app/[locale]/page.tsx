@@ -1,4 +1,5 @@
 /* import type { Metadata } from 'next'; */
+import { redirect } from 'next/navigation';
 import Introduction from './components/hero';
 import AboutMe from './components/about';
 import Projects from './components/projects/index';
@@ -16,6 +17,7 @@ import Projects from './components/projects/index';
 }
  */
 export default function Home() {
+  redirect('/no');
   return (
     <>
       <Introduction />
