@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import useTranslation from 'next-translate/useTranslation';
+import TranslateDropdown from '../../dropdown';
 
 interface NavigationItem {
   name: string;
@@ -10,9 +12,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Hjem', href: '#portfolio', current: true },
-  { name: 'Prosjekter', href: '#projects', current: false },
-  { name: 'Om MA', href: '#about', current: false },
+  { name: 'common:home', href: '#portfolio', current: true },
+  { name: 'common:projects', href: '#projects', current: false },
+  { name: 'common:about', href: '#about', current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -20,6 +22,7 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Navbar() {
+  const { t } = useTranslation('common');
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [updatedNavigation, setUpdatedNavigation] =
     useState<NavigationItem[]>(navigation);
@@ -71,7 +74,7 @@ export default function Navbar() {
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <div className="absolute inset-y-0 right-[2px] flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button
                     className="inline-flex items-center justify-center p-2 rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 z-999"
@@ -121,7 +124,7 @@ export default function Navbar() {
                               )}
                               aria-current={item.current ? 'page' : undefined}
                             >
-                              {item.name}
+                              {t(item.name)}
                               <span
                                 className={`h-[1px] inline-block bg-white absolute left-0 -bottom-0.5 group-hover:w-full w-0 transition-[width] ease duration-300'
                                 }`}
@@ -135,15 +138,22 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
+                <div className="absolute inset-y-[14px] right-[47px] sm:hidden">
+                  <TranslateDropdown />
+                </div>
+                <div className="mb-1 hidden sm:block">
+                  <TranslateDropdown />
+                </div>
               </div>
             </div>
+
             <Disclosure.Panel
               className={`navbar sm:hidden bg-dark h-full ${
                 isMobileMenuOpen ? 'overflow-hidden' : ''
               }`}
             >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform  -translate-y-1/2 mt-[-64px]">
+                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform -translate-y-1/2 mt-[-64px]">
                   {updatedNavigation.map((item) => (
                     <div
                       key={item.name}
@@ -163,7 +173,7 @@ export default function Navbar() {
                             handleMobileMenuToggle();
                           }}
                         >
-                          {item.name}
+                          {t(item.name)}
                         </div>
                       </a>
                     </div>

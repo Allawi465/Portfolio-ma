@@ -45,17 +45,15 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <span className="block text-sm text-center text-gray-400">
           &copy; {new Date().getFullYear()}
           <a
             href="https://github.com/Allawi465"
-            className="hover:underline ml-1 text-base"
+            className="hover:underline underline-offset-2 ml-1 text-[14px] mr-1"
           >
             M.A
           </a>
-          . All Rights Reserved.
         </span>
       </div>
     </footer>

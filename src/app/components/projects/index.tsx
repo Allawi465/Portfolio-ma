@@ -5,7 +5,7 @@ export default function Projects() {
     <section id="projects" className="py-4">
       <div className="py-4">
         <h2 className="text-4xl md:pt-[100px] py-1 text-white mt-7 md:mt-0">
-          Prosjekter.
+          Prosjekter
         </h2>
         <MySlider />
         <div className="arrow-scroll pt-[50px] sm:pt-[200px] ">

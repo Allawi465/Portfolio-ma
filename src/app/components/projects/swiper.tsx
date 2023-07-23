@@ -1,13 +1,13 @@
 'use client';
-import React from 'react';
+import 'swiper/css';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import { ImGithub } from 'react-icons/im';
 import { FiExternalLink } from 'react-icons/fi';
-import { slides } from './slides';
+import slides from './slides';
 
 const MySlider = () => {
+  const slideData = slides();
   return (
     <Swiper
       spaceBetween={10}
@@ -16,7 +16,7 @@ const MySlider = () => {
       pagination={{ clickable: true }}
     >
       {' '}
-      {slides.map((slide, index) => (
+      {slideData.map((slide, index) => (
         <SwiperSlide key={index}>
           <div className="swiper-card">
             <div className="sm:w-[380px] cursor-grab">

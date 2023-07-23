@@ -1,7 +1,9 @@
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import Particles from '../particlest/index';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Introduction() {
+  const { t } = useTranslation('common');
   return (
     <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <Particles
@@ -11,17 +13,17 @@ export default function Introduction() {
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
           <h1 className="text-3xl md:pt-4 text-center text-white">
-            Hei, jeg er Mohammed Allawi
+            {t('hero-h1')}
           </h1>
           <h2 className="text-darkGrey text-2xl md:py-2 text-center italic">
-            Front-end utvikler & UX-designer.
+            {t('hero-h2')}
           </h2>
           <div className="flex justify-center py-3">
             <a
               href="#projects"
               className="group flex border border-transparent bg-gold text-dark hover:border-lightGold hover:text-gold hover:bg-transparent font-bold py-2 px-10 rounded text-center"
             >
-              Mine prosjekter
+              {t('hero-btn')}
               <HiOutlineArrowRight className="h-6 w-6 ml-1 transition-transform duration-300 transform group-hover:rotate-90" />
             </a>
           </div>
