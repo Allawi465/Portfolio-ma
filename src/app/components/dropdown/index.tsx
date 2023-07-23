@@ -9,7 +9,7 @@ function classNames(...classes: string[]): string {
 }
 
 export default function TranslateDropdown() {
-  const { lang, t } = useTranslation();
+  const { lang } = useTranslation();
   const setLanguage = useSetLanguage();
   const handleLanguageChange = () => {
     const newLanguage = lang === 'en' ? 'no' : 'en';

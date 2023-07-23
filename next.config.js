@@ -1,8 +1,7 @@
 const nextTranslate = require('next-translate-plugin');
 
 const nextConfig = {
-  reactStrictMode: false,
-  output: 'export',
+  reactStrictMode: true,
 };
 
 module.exports = nextTranslate(nextConfig);

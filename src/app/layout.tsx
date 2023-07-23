@@ -22,7 +22,7 @@ export default function RootLayout({
     };
   }, []);
   return (
-    <html lang="en">
+    <html lang="no">
       <body>
         {loading ? (
           <Loading />
