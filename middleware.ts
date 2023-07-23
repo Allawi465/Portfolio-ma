@@ -1,15 +1,15 @@
 import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-  // All locales across all domains
+  // A list of all locales that are supported
   locales: ['no', 'en'],
 
-  // Used when no domain matches (e.g. on localhost)
+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
   defaultLocale: 'no',
-
+  localePrefix: 'always',
   domains: [
     {
-      domain: 'https://allawi465.github.io/Portfolio-ma/',
+      domain: 'http://localhost:3000',
       defaultLocale: 'no',
       // Optionally restrict the locales managed by this domain. If this
       // domain receives requests for another locale (e.g. us.example.com/fr),
@@ -17,10 +17,16 @@ export default createMiddleware({
       locales: ['no'],
     },
     {
-      domain: 'https://allawi465.github.io/Portfolio-ma/',
+      domain: 'http://localhost:3000',
       defaultLocale: 'no',
       // If there are no `locales` specified on a domain,
       // all global locales will be supported here.
     },
   ],
 });
+
+export const config = {
+  // Skip all paths that should not be internationalized. This example skips the
+  // folders "api", "_next" and all files with an extension (e.g. favicon.ico)
+  matcher: ['/((?!api|_next|.*\\..*).*)'],
+};

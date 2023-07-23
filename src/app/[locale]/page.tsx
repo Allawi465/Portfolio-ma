@@ -17,7 +17,6 @@ import Projects from './components/projects/index';
 }
  */
 export default function Home() {
-  redirect('/no');
   return (
     <>
       <Introduction />
