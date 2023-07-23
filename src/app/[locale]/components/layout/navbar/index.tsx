@@ -1,4 +1,5 @@
 'use client';
+import { GetStaticPropsContext } from 'next';
 import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -186,4 +187,13 @@ export default function Navbar() {
       </Disclosure>
     </header>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../../../../../../messages/${locale}.json`))
+        .default,
+    },
+  };
 }

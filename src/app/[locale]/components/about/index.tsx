@@ -1,4 +1,5 @@
 'use client';
+import { GetStaticPropsContext } from 'next';
 import Tech from '../word-cloud/tech';
 import { useTranslations } from 'next-intl';
 export default function AboutMe() {
@@ -65,4 +66,13 @@ export default function AboutMe() {
       <Tech />
     </section>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../../../../../messages/${locale}.json`))
+        .default,
+    },
+  };
 }

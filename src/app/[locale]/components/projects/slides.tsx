@@ -1,4 +1,5 @@
 'use client';
+import { GetStaticPropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import eCommerceSite from '../../../../../public/ecommerce.png';
 import bookingSite from '../../../../../public/bookingSit.jpg';
@@ -48,3 +49,12 @@ const slides = () => {
 };
 
 export default slides;
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../../../../../messages/${locale}.json`))
+        .default,
+    },
+  };
+}

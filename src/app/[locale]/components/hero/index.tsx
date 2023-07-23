@@ -1,4 +1,5 @@
 'use client';
+import { GetStaticPropsContext } from 'next';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import Particles from '../particlest/index';
 import { useTranslations } from 'next-intl';
@@ -32,4 +33,13 @@ export default function Introduction() {
       </div>
     </section>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../../../../../messages/${locale}.json`))
+        .default,
+    },
+  };
 }
