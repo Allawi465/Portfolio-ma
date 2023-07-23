@@ -7,10 +7,8 @@ import Loading from './components/loading';
 
 export default function RootLayout({
   children,
-  params: { lang },
 }: {
   children: React.ReactNode;
-  params: { lang: string };
 }) {
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +22,7 @@ export default function RootLayout({
     };
   }, []);
   return (
-    <html lang={lang}>
+    <html lang="en">
       <body>
         {loading ? (
           <Loading />

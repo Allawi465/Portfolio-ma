@@ -2,7 +2,6 @@
   "locales": ["no", "en"],
   "defaultLocale": "no",
   "pages": {
-    "*": ["common"],
-    "/": ["common"]
+    "*": ["common"]
   }
 }
