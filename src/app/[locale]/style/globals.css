@@ -135,6 +135,12 @@ section {
   }
 }
 
+@media (max-width: 640px) {
+  .swiper {
+    min-height: 400px !important;
+  }
+}
+
 @media (max-width: 611px) {
   .swiper-slide {
     width: 450px !important;
