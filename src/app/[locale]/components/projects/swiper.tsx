@@ -1,26 +1,40 @@
 'use client';
 import 'swiper/css';
-import Image from 'next/image';
+import 'swiper/css/effect-coverflow';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow } from 'swiper/modules';
+import slides from './slides';
+import Image from 'next/image';
 import { ImGithub } from 'react-icons/im';
 import { FiExternalLink } from 'react-icons/fi';
-import slides from './slides';
 
 const MySlider = () => {
   const slideData = slides();
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={5}
       slidesPerView={'auto'}
       navigation
+      grabCursor={true}
       pagination={{ clickable: true }}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      centeredSlides={true}
+      initialSlide={1}
+      effect={'coverflow'}
+      modules={[EffectCoverflow]}
+      className="mySwiper"
     >
-      {' '}
       {slideData.map((slide, index) => (
         <SwiperSlide key={index}>
           <div className="swiper-card">
-            <div className="sm:w-[380px] cursor-grab">
-              <div className="shadow-lg rounded-lg h-full flex flex-col">
+            <div className="sm:w-[500px]">
+              <div className="shadow-sm rounded-lg h-full flex flex-col">
                 <Image
                   src={slide.image}
                   alt={slide.title}

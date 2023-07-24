@@ -75,7 +75,7 @@ export default function Navbar() {
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 right-[2px] flex items-center sm:hidden">
+                <div className="absolute top-[16px] right-[5px] flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button
                     className="inline-flex items-center justify-center p-2 rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 z-999"
@@ -139,7 +139,7 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-[14px] right-[50px] sm:hidden">
+                <div className="absolute inset-y-[18px] left-[75px] sm:hidden">
                   <TranslateDropdown />
                 </div>
                 <div className="mb-1 hidden sm:block ml-2">

@@ -17,14 +17,14 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="flex justify-around">
-        <div className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-5">
+        <div className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-7">
           <div className="about-introduce-part2">
             <div className="max-w-full md:max-w-[400px]">
               <h6 className="uppercase font-bold my-3 text-white">
                 {t('about-profile')}
               </h6>
-              <p className="leading-normal text-base sm:text-xl text-darkGrey mb-2">
-                {t('about-me')}
+              <p className="leading-normal text-base sm:text-xl text-darkGrey mb-3">
+                {t('profile')}
               </p>
               <div className="flex justify-between">
                 <div>
@@ -35,7 +35,7 @@ export default function AboutMe() {
                     Mohammed Allawi
                   </p>
                 </div>
-                <div>
+                <div className="sm:mr-4">
                   <strong className="uppercase font-bold my-3 text-white">
                     {t('alder')}
                   </strong>
@@ -56,7 +56,7 @@ export default function AboutMe() {
                 HTML, CSS, Sass, JavaScript, TypeScript, React, Next.js, Figma &
                 Tailwind.
               </p>
-              <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mb-0">
+              <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mt-4 sm:mb-0">
                 {t('skills-p')}
               </p>
             </div>

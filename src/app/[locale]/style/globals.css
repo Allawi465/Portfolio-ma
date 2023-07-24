@@ -30,11 +30,11 @@ section {
 }
 
 .swiper {
-  min-height: 400px !important;
+  min-height: 520px !important;
 }
 
 .swiper-slide {
-  width: 380px !important;
+  width: 500px !important;
 }
 
 .one,
@@ -135,22 +135,52 @@ section {
   }
 }
 
-@media (max-width: 423px) {
+@media (max-width: 611px) {
   .swiper-slide {
-    width: 330px !important;
+    width: 450px !important;
   }
 
   .card-project {
-    width: 330px !important;
+    width: 450px !important;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 585px) {
   .swiper-slide {
-    width: 220px !important;
+    width: 400px !important;
   }
 
   .card-project {
-    width: 220px !important;
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 525px) {
+  .swiper-slide {
+    width: 350px !important;
+  }
+
+  .card-project {
+    width: 350px !important;
+  }
+}
+
+@media (max-width: 457px) {
+  .swiper-slide {
+    width: 300px !important;
+  }
+
+  .card-project {
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .swiper-slide {
+    width: 100% !important;
+  }
+
+  .card-project {
+    width: 100% !important;
   }
 }

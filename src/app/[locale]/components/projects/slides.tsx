@@ -12,7 +12,7 @@ const slides = () => {
   return [
     {
       image: eCommerceSite,
-      title: 'Buyers.',
+      title: 'Buyers',
       description: t('byers'),
       githubLink: 'https://github.com/Allawi465/js-framewokrs-ca',
       liveSiteLink: 'https://buyers.netlify.app/',
