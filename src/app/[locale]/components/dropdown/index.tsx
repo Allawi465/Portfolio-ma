@@ -13,7 +13,6 @@ export default function TranslateDropdown() {
   const router = useRouter();
 
   const handleLanguageChange = () => {
-    // Toggle between 'en' and 'no' based on the current locale
     const newLocale = currentLocale === 'en' ? 'no' : 'en';
     router.replace(pathname, { locale: newLocale });
   };
@@ -21,7 +20,7 @@ export default function TranslateDropdown() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white shadow-sm ring-2 ring-inset outline-none  hover:bg-gray-700 ring-gray-600 z-999 w-[45px] uppercase">
+        <Menu.Button className="inline-flex justify-center gap-x-1.5 rounded-md px-3 p-2 text-sm font-semibold text-white hover:text-[#d6d3d1] shadow-sm ring-2 ring-inset outline-none ring-gray-600 z-999 w-[45px] uppercase">
           {currentLocale}
         </Menu.Button>
       </div>
@@ -42,7 +41,7 @@ export default function TranslateDropdown() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? ' text-[#e3e3e3]' : 'text-white',
+                    active ? ' text-[#d6d3d1]' : 'text-white',
                     'block px-3 p-2 text-sm w-[45px]'
                   )}
                   onClick={handleLanguageChange}

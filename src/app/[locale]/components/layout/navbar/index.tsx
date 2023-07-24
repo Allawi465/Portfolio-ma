@@ -139,10 +139,10 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-[14px] right-[47px] sm:hidden">
+                <div className="absolute inset-y-[14px] right-[50px] sm:hidden">
                   <TranslateDropdown />
                 </div>
-                <div className="mb-1 hidden sm:block">
+                <div className="mb-1 hidden sm:block ml-2">
                   <TranslateDropdown />
                 </div>
               </div>

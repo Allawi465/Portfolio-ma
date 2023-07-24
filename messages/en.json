@@ -30,6 +30,6 @@
     "holidaze": "A front-end application for a booking site built with React, Bootstrap, Sass, and Rest-api.",
     "adventure": "A responsive website for Adventure Trails Hikes built with HTML and CSS.",
     "noxB": "An auction site where users can add and bid on items posted by other users.",
-    "notebook": "Eye-controlled virtual keyboard and calculator for disabled users."
+    "notebook": "Eye-controlled virtual keyboard and calculator for disabled users built with Bootstrap and JS."
   }
 }

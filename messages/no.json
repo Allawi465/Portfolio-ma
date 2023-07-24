@@ -30,6 +30,6 @@
     "holidaze": "En front-end applikasjon for en bookingside bygget med React, Bootstrap, Sass og Rest-api.",
     "adventure": "En responsiv nettside for Adventure Trails Hikes bygget med HTML og CSS.",
     "noxB": "En auksjonsside der brukere kan legge til og by på gjenstander lagt ut av andre brukere.",
-    "notebook": "Øyestyrte virtuell tastatur- og kalkulator for funksjonshemmede brukere."
+    "notebook": "Øyestyrt virtuell tastatur og kalkulator for funksjonshemmede brukere bygget med Bootstrap og JS."
   }
 }

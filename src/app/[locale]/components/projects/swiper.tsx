@@ -27,12 +27,12 @@ const MySlider = () => {
                   className="w-full rounded-t-lg"
                   style={{ objectFit: 'cover' }}
                 />
-                <div className="flex-grow p-4">
+                <div className="flex-grow p-4 font-normal">
                   <div className="grow">
                     <h3 className="text-white text-base font-medium tracking-tight">
                       {slide.title}
                     </h3>
-                    <p className="text-slate-400 mt-2 text-sm">
+                    <p className="text-gray-400 mt-2 text-[15px]/[20px]">
                       {slide.description}
                     </p>
                   </div>
