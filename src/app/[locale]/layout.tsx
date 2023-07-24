@@ -6,7 +6,7 @@ import Footer from './components/layout/footer';
 import { NextIntlClientProvider } from 'next-intl';
 
 export function generateStaticParams() {
-  return [{ locale: 'de' }];
+  return [{ locale: 'no' }];
 }
 
 export default async function RootLayout({
