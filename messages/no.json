@@ -10,7 +10,7 @@
   },
   "introduction": {
     "hero-h1": "Hei, jeg er Mohammed Allawi",
-    "hero-h2": "Front-end utvikler & UX-designer.",
+    "hero-h2": "Front-end utvikler & UX-designer",
     "hero-btn": "Mine prosjekter"
   },
   "about": {
@@ -26,6 +26,7 @@
     "skills-p": "Jeg har hovedfokus på å utvikle dynamiske og interaktive web-applikasjoner ved bruk av React og Next.js. Design er også viktig for meg, og jeg bruker verktøy som Figma og Tailwind CSS for å skape en god brukeropplevelse (UX) og et attraktivt User Interface. Nylig har jeg også begynt å utforske animasjoner og 3D-grafikk med Anime.js og Three.js."
   },
   "slides": {
+    "title": "Prosjekter",
     "byers": "En e-handelsbutikk bygget med React, Bootstrap, Sass og Rest-api.",
     "holidaze": "En front-end applikasjon for en bookingside bygget med React, Bootstrap, Sass og Rest-api.",
     "adventure": "En responsiv nettside for Adventure Trails Hikes bygget med HTML og CSS.",
