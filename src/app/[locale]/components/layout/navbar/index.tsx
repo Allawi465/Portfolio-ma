@@ -78,7 +78,7 @@ export default function Navbar() {
                 <div className="absolute top-[15px] right-[5px] flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button
-                    className="inline-flex items-center justify-center p-2 rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 z-999"
+                    className="inline-flex items-center justify-center p-2 rounded-lg md:hidden outline-none ring-2 text-gray-400 hover:bg-gray-600 ring-gray-600 z-999"
                     onClick={handleMobileMenuToggle}
                   >
                     <span className="sr-only">Open main menu</span>
