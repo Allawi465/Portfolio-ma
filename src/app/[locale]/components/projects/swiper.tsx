@@ -1,8 +1,9 @@
 'use client';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 import slides from './slides';
 import Image from 'next/image';
 import { ImGithub } from 'react-icons/im';
@@ -16,7 +17,9 @@ const MySlider = () => {
       slidesPerView={'auto'}
       navigation
       grabCursor={true}
-      pagination={{ clickable: true }}
+      pagination={{
+        dynamicBullets: true,
+      }}
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
@@ -27,7 +30,7 @@ const MySlider = () => {
       centeredSlides={true}
       initialSlide={1}
       effect={'coverflow'}
-      modules={[EffectCoverflow]}
+      modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
       {slideData.map((slide, index) => (

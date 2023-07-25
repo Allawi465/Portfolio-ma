@@ -33,6 +33,10 @@ section {
   min-height: 520px !important;
 }
 
+.swiper-pagination {
+  display: none !important;
+}
+
 .swiper-slide {
   width: 500px !important;
 }
@@ -188,5 +192,13 @@ section {
 
   .card-project {
     width: 100% !important;
+  }
+
+  .swiper-pagination {
+    display: block !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: #8899b1 !important;
   }
 }
