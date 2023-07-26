@@ -157,11 +157,11 @@ export default function Navbar() {
               }`}
             >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center inset-y-2/4 left-0 right-0 transform -translate-y-1/2 h-full mt-[60px]">
+                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center inset-y-2/4 left-0 right-0 transform -translate-y-1/2 h-full mt-[20px]">
                   {updatedNavigation.map((item) => (
                     <div
                       key={item.name}
-                      className="navlink-sm h-[100px] flex justify-center mt-auto"
+                      className="navlink-sm h-[110px] flex justify-center mt-auto"
                     >
                       <a href={item.href} className="w-full mt-auto">
                         <div
@@ -182,7 +182,7 @@ export default function Navbar() {
                       </a>
                     </div>
                   ))}
-                  <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400 absolute bottom-[129px] social-media">
+                  <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400 absolute bottom-[97px] social-media">
                     <li className="flex items-center social-media">
                       <a
                         href="https://github.com/Allawi465"
