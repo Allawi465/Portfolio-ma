@@ -13,7 +13,6 @@ const MySlider = () => {
   const slideData = slides();
   return (
     <Swiper
-      spaceBetween={5}
       slidesPerView={'auto'}
       navigation
       grabCursor={true}
@@ -34,39 +33,32 @@ const MySlider = () => {
       className="mySwiper"
     >
       {slideData.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div className="swiper-card">
-            <div className="sm:w-[500px]">
-              <div className="shadow-sm rounded-lg h-full flex flex-col">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  className="w-full rounded-t-lg"
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="flex-grow p-4 font-normal">
-                  <div className="grow">
-                    <h3 className="text-white text-base font-medium tracking-tight">
-                      {slide.title}
-                    </h3>
-                    <p className="text-gray-400 mt-2 text-[15px]/[20px]">
-                      {slide.description}
-                    </p>
-                  </div>
-                  <div className="flex justify-between items-center py-3 mt-2 text-white">
-                    <a href={slide.githubLink}>
-                      <ImGithub size={25} />
-                    </a>
-                    <a
-                      className="text-sky-400 flex items-center"
-                      href={slide.liveSiteLink}
-                    >
-                      Demo
-                      <FiExternalLink className="ml-1 mb-1" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <SwiperSlide key={index} className="shadow-sm rounded-lg flex flex-col">
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            className="w-full] rounded-t-lg object-cover"
+          />
+          <div className="p-4 font-normal">
+            <div className="grow">
+              <h3 className="text-white text-base font-medium tracking-tight">
+                {slide.title}
+              </h3>
+              <p className="text-gray-400 mt-2 text-[15px]/[20px]">
+                {slide.description}
+              </p>
+            </div>
+            <div className="flex justify-between items-center py-3 mt-2 text-white">
+              <a href={slide.githubLink}>
+                <ImGithub size={25} />
+              </a>
+              <a
+                className="text-sky-400 flex items-center"
+                href={slide.liveSiteLink}
+              >
+                Demo
+                <FiExternalLink className="ml-1 mb-1" />
+              </a>
             </div>
           </div>
         </SwiperSlide>
