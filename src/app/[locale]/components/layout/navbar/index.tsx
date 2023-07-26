@@ -152,37 +152,39 @@ export default function Navbar() {
             </div>
 
             <Disclosure.Panel
-              className={`navbar sm:hidden bg-dark h-full relative ${
+              className={`navbar sm:hidden bg-dark relative ${
                 isMobileMenuOpen ? 'overflow-hidden' : ''
               }`}
             >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center inset-y-2/4 left-0 right-0 transform -translate-y-1/2 h-full mt-[20px]">
-                  {updatedNavigation.map((item) => (
-                    <div
-                      key={item.name}
-                      className="navlink-sm h-[110px] flex justify-center mt-auto"
-                    >
-                      <a href={item.href} className="w-full mt-auto">
-                        <div
-                          className={classNames(
-                            item.current
-                              ? 'py-2 pl-3 pr-4 font-semibold text-gray-100'
-                              : 'py-2 pl-3 pr-4 text-gray-400 rounded md:hover:bg-transparent hover:bg-gray-700 hover:text-white',
-                            'rounded-md mx-4 pt-2 font-medium mt-2.5 relative group'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                          onClick={() => {
-                            close();
-                            handleMobileMenuToggle();
-                          }}
-                        >
-                          {t(item.name)}
-                        </div>
-                      </a>
-                    </div>
-                  ))}
-                  <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400 absolute bottom-[97px] social-media">
+                <div className="space-y-1 px-2 pb-3 pt-2 absolute text-center inset-y-2/4 left-0 right-0 transform -translate-y-1/2 h-full">
+                  <div className="h-full my-auto flex flex-col justify-center">
+                    {updatedNavigation.map((item) => (
+                      <div
+                        key={item.name}
+                        className="navlink-sm h-[125px] flex justify-center"
+                      >
+                        <a href={item.href} className="w-full my-auto">
+                          <div
+                            className={classNames(
+                              item.current
+                                ? 'py-2 pl-3 pr-4 font-semibold text-gray-100'
+                                : 'py-2 pl-3 pr-4 text-gray-400 rounded md:hover:bg-transparent hover:bg-gray-700 hover:text-white',
+                              'rounded-md mx-4 pt-2 font-medium mt-2.5 group'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                            onClick={() => {
+                              close();
+                              handleMobileMenuToggle();
+                            }}
+                          >
+                            {t(item.name)}
+                          </div>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                  <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400 absolute bottom-0 social-media">
                     <li className="flex items-center social-media">
                       <a
                         href="https://github.com/Allawi465"
