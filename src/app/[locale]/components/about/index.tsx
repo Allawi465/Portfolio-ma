@@ -2,22 +2,49 @@
 import { GetStaticPropsContext } from 'next';
 import Tech from '../word-cloud/tech';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 export default function AboutMe() {
   const t = useTranslations('about');
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section id="about" className="py-4">
-      <div className="py-4">
-        <h3 className="text-center text-4xl md:pt-[100px] ml-3 py-2 text-white mt-7 md:mt-0">
+      <motion.div className="py-4" ref={ref}>
+        <motion.h3
+          className="text-center text-4xl md:pt-[100px] ml-3 py-2 text-white mt-7 md:mt-0"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -100 }}
+          transition={{ duration: 1, type: 'spring', stiffness: 60 }}
+        >
           {t('about-h1')}
-        </h3>
+        </motion.h3>
         <div className="flex justify-center flex-wrap md:flex-nowrap gap-3">
-          <p className="max-w-[800px] leading-normal text-base sm:text-xl text-darkGrey">
+          <motion.p
+            className="max-w-[800px] leading-normal text-base sm:text-xl text-darkGrey"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+            transition={{ duration: 1, type: 'spring', stiffness: 60 }}
+          >
             {t('about-me')}
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
       <div className="flex justify-around">
-        <div className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-7">
+        <motion.div
+          className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-7"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+          transition={{
+            duration: 1,
+            type: 'spring',
+            delay: 0.6,
+            stiffness: 60,
+          }}
+        >
           <div className="about-introduce-part2">
             <div className="max-w-full md:max-w-[400px]">
               <h6 className="uppercase font-bold my-3 text-white">
@@ -61,9 +88,15 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <Tech />
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+        transition={{ duration: 1, type: 'spring', delay: 1.4, stiffness: 60 }}
+      >
+        <Tech />
+      </motion.div>
     </section>
   );
 }

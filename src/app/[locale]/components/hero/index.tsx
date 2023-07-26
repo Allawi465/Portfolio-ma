@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Introduction() {
   const t = useTranslations('introduction');
+
   return (
     <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <Particles
@@ -14,16 +15,20 @@ export default function Introduction() {
       />
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
-          <h1 className="text-3xl md:pt-4 text-center text-white">
+          <h1
+            className={`text-3xl md:pt-4 text-center text-white animate-slide-in`}
+          >
             {t('hero-h1')}
           </h1>
-          <h2 className="text-darkGrey text-2xl md:py-2 text-center italic">
+          <h2
+            className={`text-darkGrey text-2xl md:py-2 text-center italic animate-slide-in`}
+          >
             {t('hero-h2')}
           </h2>
-          <div className="flex justify-center py-3">
+          <div className={`flex justify-center py-3 animate-slide-in`}>
             <a
               href="#projects"
-              className="group flex flex-wrap border border-transparent bg-gold text-dark hover:border-lightGold hover:text-gold hover:bg-transparent font-bold py-2 px-4 md:px-10 rounded text-center"
+              className={`group flex flex-wrap border border-transparent bg-gold text-dark hover:border-lightGold hover:text-gold hover:bg-transparent font-bold py-2 px-4 md:px-10 rounded text-center animate-slide-in`}
             >
               {t('hero-btn')}
               <HiOutlineArrowRight className="h-6 w-6 ml-1 transition-transform duration-300 transform group-hover:rotate-90" />
