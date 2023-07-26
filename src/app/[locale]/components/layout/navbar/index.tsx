@@ -1,10 +1,13 @@
 'use client';
 import { GetStaticPropsContext } from 'next';
 import { useEffect, useState } from 'react';
-import { Disclosure } from '@headlessui/react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTranslations } from 'next-intl';
 import TranslateDropdown from '../../dropdown';
+import { Disclosure } from '@headlessui/react';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { ImGithub } from 'react-icons/im';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { MdOutgoingMail } from 'react-icons/md';
 
 interface NavigationItem {
   name: string;
@@ -149,18 +152,18 @@ export default function Navbar() {
             </div>
 
             <Disclosure.Panel
-              className={`navbar sm:hidden bg-dark h-full ${
+              className={`navbar sm:hidden bg-dark h-full relative ${
                 isMobileMenuOpen ? 'overflow-hidden' : ''
               }`}
             >
               {({ close }) => (
-                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center top-1/2 left-0 right-0 transform -translate-y-1/2 mt-[-64px]">
+                <div className="space-y-1 px-2 pb-3 pt-2 fixed text-center inset-y-2/4 left-0 right-0 transform -translate-y-1/2 h-full mt-[60px]">
                   {updatedNavigation.map((item) => (
                     <div
                       key={item.name}
-                      className="navlink-sm h-[120px] flex justify-center w-full my-auto"
+                      className="navlink-sm h-[100px] flex justify-center mt-auto"
                     >
-                      <a href={item.href} className="w-full my-auto">
+                      <a href={item.href} className="w-full mt-auto">
                         <div
                           className={classNames(
                             item.current
@@ -179,6 +182,29 @@ export default function Navbar() {
                       </a>
                     </div>
                   ))}
+                  <ul className="flex flex-wrap items-center text-sm font-medium mb-0 text-gray-400 absolute bottom-[129px] social-media">
+                    <li className="flex items-center social-media">
+                      <a
+                        href="https://github.com/Allawi465"
+                        className="p-2 m-1"
+                      >
+                        <ImGithub size={25} />
+                      </a>
+                    </li>
+                    <li className="flex items-center">
+                      <a href="mailto:allawi465@gmail.com" className="p-2 m-1">
+                        <MdOutgoingMail size={25} />
+                      </a>
+                    </li>
+                    <li className="flex items-center">
+                      <a
+                        href="https://www.linkedin.com/in/mohammed-allawi-89830621a/"
+                        className="p-2 m-1"
+                      >
+                        <AiFillLinkedin size={25} />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               )}
             </Disclosure.Panel>
