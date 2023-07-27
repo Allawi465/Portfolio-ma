@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Change it according to your need
+    triggerOnce: true,
   });
 
   const t = useTranslations('slides');
@@ -17,7 +17,7 @@ export default function Projects() {
       <motion.div className="flex flex-col w-full" ref={ref}>
         <div className="py-4">
           <motion.h2
-            className="text-4xl ml-3 py-2 text-white mt-[60px] md:mt-0"
+            className="text-4xl  py-2 text-white mt-[60px] md:mt-0"
             initial={{ opacity: 0, y: -100 }}
             animate={{
               opacity: inView ? 1 : 0,

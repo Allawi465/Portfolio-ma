@@ -75,7 +75,7 @@ export default function AboutMe() {
                 duration: 1,
                 type: 'spring',
                 stiffness: 60,
-                delay: 0.5,
+                delay: 0.4,
               }}
             >
               <h6 className="uppercase font-bold my-3 text-white">
@@ -117,7 +117,7 @@ export default function AboutMe() {
                 duration: 1,
                 type: 'spring',
                 stiffness: 60,
-                delay: 0.5,
+                delay: delay,
               }}
             >
               <h6 className="uppercase font-bold my-3 text-white">
@@ -140,7 +140,12 @@ export default function AboutMe() {
         ref={refB}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: inViewBalls ? 1 : 0, y: inViewBalls ? 0 : 100 }}
-        transition={{ duration: 1, type: 'spring', delay: 0.3, stiffness: 60 }}
+        transition={{
+          duration: 1,
+          type: 'spring',
+          delay: delay,
+          stiffness: 60,
+        }}
       >
         <Tech />
       </motion.div>
@@ -156,3 +161,19 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     },
   };
 }
+
+const calculateDelay = () => {
+  let delay = 0.5;
+
+  if (typeof window !== 'undefined') {
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth <= 640) {
+      delay = 0.2;
+    }
+  }
+
+  return delay;
+};
+
+const delay = calculateDelay();
