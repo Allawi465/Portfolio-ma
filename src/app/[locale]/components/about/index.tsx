@@ -169,7 +169,7 @@ const calculateDelay = () => {
     const viewportWidth = window.innerWidth;
 
     if (viewportWidth <= 640) {
-      delay = 0.2;
+      delay = 0.1;
     }
   }
 
