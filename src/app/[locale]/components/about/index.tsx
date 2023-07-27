@@ -7,46 +7,77 @@ import { useInView } from 'react-intersection-observer';
 
 export default function AboutMe() {
   const t = useTranslations('about');
-  const { ref, inView } = useInView({
+
+  const { ref: refTitle, inView: inViewTitle } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: refP, inView: inViewParagraph } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: refPr, inView: inViewProfile } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: refS, inView: inViewSkills } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: refB, inView: inViewBalls } = useInView({
     triggerOnce: true,
   });
 
   return (
     <section id="about" className="py-4">
-      <motion.div className="py-4" ref={ref}>
+      <motion.div className="py-4" ref={refTitle}>
         <motion.h3
           className="text-center text-4xl md:pt-[100px] ml-3 py-2 text-white mt-7 md:mt-0"
           initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -100 }}
+          animate={{ opacity: inViewTitle ? 1 : 0, y: inViewTitle ? 0 : -100 }}
           transition={{ duration: 1, type: 'spring', stiffness: 60 }}
         >
           {t('about-h1')}
         </motion.h3>
         <div className="flex justify-center flex-wrap md:flex-nowrap gap-3">
           <motion.p
+            ref={refP}
             className="max-w-[800px] leading-normal text-base sm:text-xl text-darkGrey"
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-            transition={{ duration: 1, type: 'spring', stiffness: 60 }}
+            animate={{
+              opacity: inViewParagraph ? 1 : 0,
+              x: inViewParagraph ? 0 : -100,
+            }}
+            transition={{
+              duration: 1,
+              type: 'spring',
+              stiffness: 60,
+              delay: 0.4,
+            }}
           >
             {t('about-me')}
           </motion.p>
         </div>
       </motion.div>
+
       <div className="flex justify-around">
-        <motion.div
-          className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-7"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-          transition={{
-            duration: 1,
-            type: 'spring',
-            delay: 0.6,
-            stiffness: 60,
-          }}
-        >
+        <div className="flex max-w-full w-[800px] justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-7">
           <div className="about-introduce-part2">
-            <div className="max-w-full md:max-w-[400px]">
+            <motion.div
+              className="max-w-full md:max-w-[400px]"
+              ref={refPr}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{
+                opacity: inViewProfile ? 1 : 0,
+                x: inViewProfile ? 0 : -100,
+              }}
+              transition={{
+                duration: 1,
+                type: 'spring',
+                stiffness: 60,
+                delay: 0.5,
+              }}
+            >
               <h6 className="uppercase font-bold my-3 text-white">
                 {t('about-profile')}
               </h6>
@@ -71,10 +102,24 @@ export default function AboutMe() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
+
           <div className="max-w-full md:max-w-[400px] flex justify-center">
-            <div>
+            <motion.div
+              ref={refS}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{
+                opacity: inViewSkills ? 1 : 0,
+                y: inViewSkills ? 0 : 100,
+              }}
+              transition={{
+                duration: 1,
+                type: 'spring',
+                stiffness: 60,
+                delay: 0.5,
+              }}
+            >
               <h6 className="uppercase font-bold my-3 text-white">
                 {t('ferdigheter')}
               </h6>
@@ -86,14 +131,16 @@ export default function AboutMe() {
               <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mt-4 sm:mb-0">
                 {t('skills-p')}
               </p>
-            </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
+
       <motion.div
+        ref={refB}
         initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
-        transition={{ duration: 1, type: 'spring', delay: 1.4, stiffness: 60 }}
+        animate={{ opacity: inViewBalls ? 1 : 0, y: inViewBalls ? 0 : 100 }}
+        transition={{ duration: 1, type: 'spring', delay: 0.3, stiffness: 60 }}
       >
         <Tech />
       </motion.div>

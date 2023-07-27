@@ -13,25 +13,31 @@ export default function Projects() {
 
   const t = useTranslations('slides');
   return (
-    <div id="projects" className="min-h-screen py-4 flex items-center">
+    <div id="projects" className="min-h-screen py-4 flex sm:items-center">
       <motion.div className="flex flex-col w-full" ref={ref}>
         <div className="py-4">
           <motion.h2
-            className="text-4xl pb-5 text-white mt-7"
+            className="text-4xl ml-3 py-2 text-white mt-[60px] md:mt-0"
             initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -100 }}
+            animate={{
+              opacity: inView ? 1 : 0,
+              y: inView ? 0 : -100,
+            }}
             transition={{ duration: 1, type: 'spring', stiffness: 60 }}
           >
             {t('title')}
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+            initial={{ opacity: 0, y: 200 }}
+            animate={{
+              opacity: inView ? 1 : 0,
+              y: inView ? 0 : 200,
+            }}
             transition={{
               duration: 1,
               type: 'spring',
               stiffness: 60,
-              delay: 0.5,
+              delay: 0.3,
             }}
           >
             <MySlider />
