@@ -1,5 +1,5 @@
 .swiper {
-  min-height: 460px !important;
+  min-height: 480px !important;
 }
 
 .swiper-slide {
@@ -7,15 +7,11 @@
 }
 
 .swiper-pagination {
-  bottom: 0 !important;
+  bottom: 0px !important;
 }
 
 .swiper-pagination-bullet {
   background: #8899b1 !important;
-}
-
-.scroll {
-  margin-top: 200px;
 }
 
 @media (max-width: 611px) {
@@ -27,26 +23,8 @@
     width: 450px !important;
   }
 
-  .scroll {
-    margin-top: 120px;
-  }
-}
-
-@media (max-width: 585px) {
-  .swiper-slide {
-    width: 400px !important;
-  }
-
-  .card-project {
-    width: 400px !important;
-  }
-
   .swiper {
-    min-height: 400px !important;
-  }
-
-  .scroll {
-    margin-top: 100px;
+    min-height: 450px !important;
   }
 }
 
@@ -58,36 +36,22 @@
   .card-project {
     width: 100% !important;
   }
+}
 
+@media (max-width: 440px) {
   .swiper {
     min-height: 440px !important;
   }
 }
 
-@media (max-width: 480px) {
-  .swiper {
-    min-height: 420px !important;
-  }
-}
-
-@media (max-width: 428px) {
+@media (max-width: 375px) {
   .swiper {
     min-height: 400px !important;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .swiper {
-    min-height: 380px !important;
-  }
-
-  .scroll {
-    margin-top: 75px;
-  }
-}
-
-@media (max-width: 340px) {
-  .swiper {
-    min-height: 360px !important;
+    min-height: 390px !important;
   }
 }

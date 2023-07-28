@@ -40,7 +40,7 @@ section {
   bottom: 0;
   visibility: hidden;
   /* Animation */
-  animation-name: slideFromRight;
+  animation-name: slideFromUp;
   animation-duration: 0.8s;
   animation-timing-function: ease-in-out;
   animation-delay: 0.1s;
@@ -48,7 +48,7 @@ section {
 }
 
 .navlink-sm {
-  animation-name: slideFromRightLink;
+  animation-name: slideFromUp;
   animation-duration: 0.8s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -56,12 +56,12 @@ section {
 }
 
 .social-media {
-  animation-name: slideFromRightLink;
+  animation-name: slideFromRightSocial;
   animation-duration: 0.8s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-delay: 0.3s;
-  visibility: hidden;
+  opacity: 0;
 }
 
 .navlink-sm:nth-child(1) {
@@ -76,7 +76,7 @@ section {
   animation-delay: 0.3s;
 }
 
-@keyframes slideFromRight {
+@keyframes slideFromUp {
   0% {
     transform: translateY(-100%);
     visibility: visible;
@@ -87,13 +87,13 @@ section {
   }
 }
 
-@keyframes slideFromRightLink {
+@keyframes slideFromRightSocial {
   0% {
     transform: translateY(-100%);
-    visibility: visible;
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
-    visibility: visible;
+    opacity: 1;
   }
 }
