@@ -29,9 +29,6 @@ module.exports = {
       },
       animation: {
         'fade-in': 'fade-in 1s ease-in-out forwards',
-        'slide-in': 'slide-in 1s ease 1s forwards',
-        'slide-in-delayed-2': 'slide-in 1s ease 1.03s forwards',
-        'slide-in-delayed-3': 'slide-in 1s ease 1.06s forwards',
       },
       keyframes: {
         'fade-in': {
@@ -44,10 +41,6 @@ module.exports = {
           '100%': {
             opacity: '100%',
           },
-        },
-        'slide-in': {
-          '0%': { opacity: '0', transform: 'translateY(100px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
