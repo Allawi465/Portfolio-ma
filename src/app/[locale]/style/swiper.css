@@ -1,5 +1,5 @@
 .swiper {
-  min-height: 480px !important;
+  min-height: 470px !important;
 }
 
 .swiper-slide {
@@ -22,9 +22,19 @@
   .card-project {
     width: 450px !important;
   }
+}
+
+@media (max-width: 585px) {
+  .swiper-slide {
+    width: 400px !important;
+  }
+
+  .card-project {
+    width: 400px !important;
+  }
 
   .swiper {
-    min-height: 450px !important;
+    min-height: 440px !important;
   }
 }
 
@@ -38,20 +48,20 @@
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 428px) {
   .swiper {
-    min-height: 440px !important;
+    min-height: 410px !important;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .swiper {
-    min-height: 400px !important;
+    min-height: 380px !important;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 340px) {
   .swiper {
-    min-height: 390px !important;
+    min-height: 370px !important;
   }
 }

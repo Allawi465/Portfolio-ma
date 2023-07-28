@@ -87,6 +87,7 @@ section {
   }
 }
 
+
 @keyframes slideFromRightSocial {
   0% {
     transform: translateY(-100%);

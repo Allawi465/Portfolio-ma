@@ -11,7 +11,7 @@ export default function Introduction() {
     <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in opacity-0"
-        quantity={200}
+        quantity={150}
       />
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
