@@ -10,7 +10,7 @@ export default function Projects() {
     <section id="projects" className="min-h-screen py-4 flex sm:items-center ">
       <div className="flex flex-col w-full">
         <div className="py-4">
-          <h2 className="text-4xl py-2 text-white mt-[60px] md:mt-0 mb-2">
+          <h2 className="text-4xl md:pt-[40px] ml-3 py-2 text-white mt-7 md:mt-0">
             {t('title')}
           </h2>
           <div>

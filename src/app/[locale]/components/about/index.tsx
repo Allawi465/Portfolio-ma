@@ -143,7 +143,6 @@ export default function AboutMe() {
         transition={{
           duration: 1,
           type: 'spring',
-          delay: delay,
           stiffness: 60,
         }}
       >
