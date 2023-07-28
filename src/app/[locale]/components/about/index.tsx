@@ -32,7 +32,7 @@ export default function AboutMe() {
     <section id="about" className="py-4">
       <motion.div className="py-4" ref={refTitle}>
         <motion.h3
-          className="text-center text-4xl md:pt-[100px] ml-3 py-2 text-white mt-7 md:mt-0"
+          className="text-center text-4xl md:pt-[40px] ml-3 py-2 text-white mt-7 md:mt-0"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: inViewTitle ? 1 : 0, y: inViewTitle ? 0 : -100 }}
           transition={{ duration: 1, type: 'spring', stiffness: 60 }}
@@ -52,7 +52,7 @@ export default function AboutMe() {
               duration: 1,
               type: 'spring',
               stiffness: 60,
-              delay: 0.4,
+              delay: 0.2,
             }}
           >
             {t('about-me')}
@@ -75,7 +75,7 @@ export default function AboutMe() {
                 duration: 1,
                 type: 'spring',
                 stiffness: 60,
-                delay: 0.4,
+                delay: 0.3,
               }}
             >
               <h6 className="uppercase font-bold my-3 text-white">
@@ -84,7 +84,7 @@ export default function AboutMe() {
               <p className="leading-normal text-base sm:text-xl text-darkGrey mb-3">
                 {t('profile')}
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-5">
                 <div>
                   <strong className="uppercase font-bold my-3 text-white">
                     {t('fullName')}
@@ -125,10 +125,10 @@ export default function AboutMe() {
               </h6>
               <p className="profil-pargf text-darkGrey">
                 <span className="font-bold text-white ">{t('skills')}</span>:
-                HTML, CSS, Sass, JavaScript, TypeScript, React, Next.js, Figma &
-                Tailwind.
+                HTML, CSS, Sass, JavaScript, TypeScript, React, Next.js, Sanity,
+                Figma & Tailwind.
               </p>
-              <p className="my-2 text-base sm:text-xl text-darkGrey mb-6 sm:mt-4 sm:mb-0">
+              <p className="text-base sm:text-xl text-darkGrey mb-6 sm:mb-0">
                 {t('skills-p')}
               </p>
             </motion.div>
@@ -163,13 +163,13 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 }
 
 const calculateDelay = () => {
-  let delay = 0.5;
+  let delay = 0.3;
 
   if (typeof window !== 'undefined') {
     const viewportWidth = window.innerWidth;
 
     if (viewportWidth <= 640) {
-      delay = 0.1;
+      delay = 0;
     }
   }
 
