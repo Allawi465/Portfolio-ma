@@ -11,26 +11,20 @@ export default function Introduction() {
     <section id="portfolio" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in opacity-0"
-        quantity={100}
+        quantity={200}
       />
       <div className="flex justify-center h-screen">
         <div className="my-auto sm:my-auto">
-          <h1
-            className={`text-3xl md:pt-4 text-center text-white animate-slide-in opacity-0`}
-          >
+          <h1 className={`text-3xl md:pt-4 text-center text-white`}>
             {t('hero-h1')}
           </h1>
-          <h2
-            className={`text-darkGrey text-2xl md:py-2 text-center italic animate-slide-in-delayed-2 opacity-0`}
-          >
+          <h2 className={`text-darkGrey text-2xl md:py-2 text-center italic`}>
             {t('hero-h2')}
           </h2>
-          <div
-            className={`flex justify-center py-3 animate-slide-in-delayed-3 opacity-0`}
-          >
+          <div className={`flex justify-center py-3`}>
             <a
               href="#projects"
-              className={`group flex flex-wrap border border-transparent bg-gold text-dark hover:border-lightGold hover:text-gold hover:bg-transparent font-bold py-2 px-4 md:px-10 rounded text-center animate-slide-in-delayed-3 opacity-0`}
+              className={`group flex flex-wrap border border-transparent bg-gold text-dark hover:border-lightGold hover:text-gold hover:bg-transparent font-bold py-2 px-4 md:px-10 rounded text-center`}
             >
               {t('hero-btn')}
               <HiOutlineArrowRight className="h-6 w-6 ml-1 transition-transform duration-300 transform group-hover:rotate-90" />
