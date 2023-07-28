@@ -78,7 +78,7 @@ export default function Navbar() {
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute top-[15px] right-[5px] flex items-center sm:hidden animate-slide-in opacity-0">
+                <div className="absolute top-[15px] right-[5px] flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button
                     className="inline-flex items-center justify-center p-2 rounded-lg md:hidden outline-none ring-2 text-gray-400 hover:bg-gray-600 ring-gray-600 z-999"
@@ -101,7 +101,7 @@ export default function Navbar() {
 
                 <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-between">
                   <div
-                    className="flex items-center justify-center mt-1 ml-2 animate-slide-in opacity-0"
+                    className="flex items-center justify-center mt-1 ml-2"
                     style={{ fontFamily: "'Sail', cursive" }}
                   >
                     <div className="bg-dark text-white ">
@@ -114,7 +114,7 @@ export default function Navbar() {
                     </div>
                   </div>
 
-                  <div className="hidden sm:ml-6 sm:block animate-slide-in opacity-0">
+                  <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-2">
                       {updatedNavigation.map((item) => (
                         <div key={item.name}>
@@ -142,10 +142,10 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-[18px] left-[75px] sm:hidden animate-slide-in opacity-0">
+                <div className="absolute inset-y-[18px] left-[75px] sm:hidden">
                   <TranslateDropdown />
                 </div>
-                <div className="mb-1 hidden sm:block ml-2 animate-slide-in opacity-0">
+                <div className="mb-1 hidden sm:block ml-2">
                   <TranslateDropdown />
                 </div>
               </div>
