@@ -3,48 +3,22 @@ import '../../style/swiper.css';
 import { GetStaticPropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import MySlider from './swiper';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 export default function Projects() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-
   const t = useTranslations('slides');
   return (
-    <div id="projects" className="min-h-screen py-4 flex sm:items-center">
+    <section id="projects" className="min-h-screen py-4 flex sm:items-center ">
       <div className="flex flex-col w-full">
-        <motion.div className="py-4" ref={ref}>
-          <motion.h2
-            className="text-4xl  py-2 text-white mt-[60px] md:mt-0"
-            initial={{ opacity: 0, y: -100 }}
-            animate={{
-              opacity: inView ? 1 : 0,
-              y: inView ? 0 : -100,
-            }}
-            transition={{ duration: 1, type: 'spring', stiffness: 60 }}
-          >
+        <div className="py-4">
+          <h2 className="text-4xl py-2 text-white mt-[60px] md:mt-0 mb-2">
             {t('title')}
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, y: 200 }}
-            animate={{
-              opacity: inView ? 1 : 0,
-              y: inView ? 0 : 200,
-            }}
-            transition={{
-              duration: 1,
-              type: 'spring',
-              stiffness: 60,
-              delay: 0.3,
-            }}
-          >
+          </h2>
+          <div>
             <MySlider />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

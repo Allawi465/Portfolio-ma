@@ -33,22 +33,22 @@ const MySlider = () => {
       className="mySwiper"
     >
       {slideData.map((slide, index) => (
-        <SwiperSlide key={index} className="shadow-sm rounded-lg flex flex-col">
+        <SwiperSlide key={index} className="shadow-sm rounded-lg relative">
           <Image
             src={slide.image}
             alt={slide.title}
-            className="w-full] rounded-t-lg object-cover"
+            className="rounded-t-lg object-cover w-full"
           />
-          <div className="p-4 font-normal">
-            <div className="grow">
-              <h3 className="text-white text-base font-medium tracking-tight">
+          <div className="p-4 font-normal flex flex-col w-full">
+            <div className="my-2">
+              <h3 className="text-white text-[20px]/[20px] font-medium tracking-tight mb-3">
                 {slide.title}
               </h3>
-              <p className="text-gray-400 mt-2 text-[15px]/[20px]">
+              <p className="text-gray-400 text-[16px]/[20px] my-2">
                 {slide.description}
               </p>
             </div>
-            <div className="flex justify-between items-center py-3 mt-2 text-white">
+            <div className="flex justify-between items-center py-3 text-white">
               <a href={slide.githubLink}>
                 <ImGithub size={25} />
               </a>
