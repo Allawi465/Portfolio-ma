@@ -7,7 +7,10 @@ import MySlider from './swiper';
 export default function Projects() {
   const t = useTranslations('slides');
   return (
-    <section id="projects" className="min-h-screen py-4 flex sm:items-center ">
+    <section
+      id="projects"
+      className="min-h-screen py-8 md:py4 flex sm:items-center "
+    >
       <div className="flex flex-col w-full">
         <div className="py-4">
           <h2 className="text-4xl md:pt-[40px] ml-3 py-2 text-white mt-7 md:mt-0">
