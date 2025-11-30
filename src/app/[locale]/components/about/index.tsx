@@ -90,7 +90,7 @@ export default function AboutMe() {
                     {t('fullName')}
                   </strong>
                   <p className="leading-normal text-base sm:text-xl text-darkGrey mb-2">
-                    Mohammed Allawi
+                    Allawi Mohammed
                   </p>
                 </div>
                 <div className="sm:mr-4">
