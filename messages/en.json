@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Portfolio | MA",
+    "title": "Portfolio | AM",
     "content": "This is the content of the home page."
   },
   "navbar": {
     "home": "Home",
     "projects": "Projects",
-    "about": "About MA"
+    "about": "About AM"
   },
   "introduction": {
     "hero-h1": "Hello, I'm Allawi Mohammed",
