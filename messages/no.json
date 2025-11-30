@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Portefølje | MA",
+    "title": "Portefølje | AM",
     "content": "Dette er min Portefølje side."
   },
   "navbar": {
     "home": "Hjem",
     "projects": "Prosjekter",
-    "about": "Om MA"
+    "about": "Om AM"
   },
   "introduction": {
     "hero-h1": "Hei, jeg er Allawi Mohammed",
@@ -14,7 +14,7 @@
     "hero-btn": "Mine prosjekter"
   },
   "about": {
-    "about-h1": "Om MA",
+    "about-h1": "Om AM",
     "about-me": "Jeg er utdannet Front-end utvikler fra Noroff School of technology and Digital media Norge. Jeg er lidenskapelig opptatt av koding og utfordringene det presenterer. Mye av tiden min bruker jeg på å utforske og videreutvikle ferdighetene mine innen de ulike språkene programmering. Jeg jobber hele tiden mot å innhente mer erfaring og håper på å en dag kunne jobbe som full stack developer.",
     "about-profile": "Profil",
     "profile": "Jeg er lokalisert i Norge, og har utforsket utvikler verdenen gjennom min utdanning på 2 år, samt gjennom egen utforskning. Dette har gjort at jeg har opparbeidet meg gode ferdigheter innenfor programmering og koding. Jeg er svært interessert i å lære og jobber alltid mot å nå nye høyder innenfor systemutvikling.",
