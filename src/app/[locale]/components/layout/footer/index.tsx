@@ -20,7 +20,7 @@ export default function Footer() {
                 href="#portfolio"
                 className="w-14 h-14 flex items-center justify-center"
               >
-                <span className="text-[22px] font-bold">MA</span>
+                <span className="text-[22px] font-bold"> AM</span>
               </a>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
             href="https://github.com/Allawi465"
             className="hover:underline underline-offset-2 ml-1 text-[14px] mr-1"
           >
-            M.A
+            A.M
           </a>
         </span>
       </div>
