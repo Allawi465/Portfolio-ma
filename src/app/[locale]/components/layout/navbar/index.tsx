@@ -109,7 +109,7 @@ export default function Navbar() {
                         href="#portfolio"
                         className="w-14 h-14 flex items-center justify-center"
                       >
-                        <span className="text-[22px] font-bold">MA</span>
+                        <span className="text-[22px] font-bold">AM</span>
                       </a>
                     </div>
                   </div>
